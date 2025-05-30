@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog de AlejandroMBJS — Explorando capturas invisibles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Fira Code', monospace;
+      line-height: 1.7;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #00ffe7;
+    }
+    a {
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background: #1a1a1a;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Capturas invisibles y Microsoft Teams: un experimento personal</h1>
+
+  <p><strong>Publicado por:</strong> AlejandroMBJS<br>
+     <strong>Fecha:</strong> 30/05/2025</p>
+
+  <h2>👀 ¿Qué pasó con las capturas?</h2>
+  <p>
+    Hace poco, Microsoft Teams implementó una función para bloquear capturas de pantalla. Ya no puedes simplemente pulsar <code>PrintScreen</code> y guardar una conversación o evidencia visual. Como desarrollador y profesional de seguridad, esto me hizo pensar:
+  </p>
+
+  <blockquote>
+    <em>¿Y si quiero guardar algo importante que estoy viendo, pero no puedo capturarlo por esta nueva protección?</em>
+  </blockquote>
+
+  <h2>💡 Nace una idea: ScreenWatcher</h2>
+  <p>
+    Estoy empezando un experimento llamado <strong>ScreenWatcher</strong>. La idea es sencilla en teoría (difícil en práctica): grabar la pantalla en segundo plano todo el tiempo (pero sin guardar el video completo), y detectar el momento exacto en que el usuario intenta hacer una captura. En lugar de que Teams bloquee ese intento, el programa buscará recuperar solo el <strong>frame correspondiente</strong>.
+  </p>
+
+  <p>
+    No sé si funcionará. En serio. Todavía estoy explorando cómo manejar señales del sistema, buffers de video, y cómo reaccionan diferentes entornos (Linux, Windows) ante teclas como <code>PrintScreen</code>. Pero me gusta el reto técnico y lo que podría aportar.
+  </p>
+
+  <h2>⚙️ ¿Qué hará exactamente?</h2>
+  <ul>
+    <li>Grabación silenciosa de pantalla en tiempo real.</li>
+    <li>Detección de eventos como captura de pantalla.</li>
+    <li>Recuperación del frame más cercano al evento.</li>
+    <li>Sin almacenar archivos innecesarios.</li>
+  </ul>
+
+  <h2>🚫 ¿Es esto ilegal?</h2>
+  <p>
+    No. Todo se hace localmente. No hay espionaje ni filtración. Es lo que tú ya estás viendo como usuario. Lo veo como una herramienta para <strong>documentación profesional</strong> en contextos donde, de otro modo, no podrías guardar evidencia visual.
+  </p>
+
+  <h2>🛠️ ¿Y el código?</h2>
+  <p>
+    El proyecto está siendo escrito en <strong>Golang</strong>, con foco en rendimiento y portabilidad. Será multiplataforma y <strong>open source</strong>. No busco ocultar nada, al contrario: quiero que cualquiera pueda revisarlo, mejorarlo o criticarlo.
+  </p>
+
+  <h2>📦 ¿Cuándo lo lanzo?</h2>
+  <p>
+    Pronto. Estoy terminando algunos tests y luego publicaré todo en mi GitHub. El objetivo no es solo hacer que funcione, sino que esté bien hecho, documentado y libre para quien quiera entender cómo lo logré (o por qué no funcionó).
+  </p>
+
+  <p>Sigue mi perfil en GitHub: <a href="https://github.com/AlejandroMBJS" target="_blank">AlejandroMBJS</a></p>
+
+  <h2>🙋‍♂️ ¿Te interesa?</h2>
+  <p>
+    Si te gusta la ciberseguridad, las herramientas de automatización o simplemente el hacking legal, estaré feliz de que colabores. Ideas, sugerencias, correcciones... todo es bienvenido.
+  </p>
+
+  <hr />
+  <p style="font-size: 0.9em; color: #888;">AlejandroMBJS — Software Engineer & Security Enthusiast</p>
+
+</body>
+</html>

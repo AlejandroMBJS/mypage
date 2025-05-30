@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contact Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Alejandro Mejia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="experience.html">Experiencia</a>
+      <a href="projects.html">Proyectos</a>
+      <a href="fast-port-blog.html">Fast Port Blog</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+    <h1>Contacto</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Formulario de Contacto</h2>
+      <form id="contact-form" action="https://formspree.io/f/mnqewbga" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="response" class="mt-4 text-center"></div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Alejandro Mejia
+  </footer>
+</body>
+</html>
